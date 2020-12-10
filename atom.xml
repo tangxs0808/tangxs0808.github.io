@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
+  <title>Tangxs&#39;s Tavern</title>
   
+  <subtitle>Sharing is a virtue</subtitle>
+  <link href="https://hexo.tangxs0808.ltd/atom.xml" rel="self"/>
   
-  <link href="http://example.com/atom.xml" rel="self"/>
-  
-  <link href="http://example.com/"/>
+  <link href="https://hexo.tangxs0808.ltd/"/>
   <updated>2020-12-10T05:04:42.068Z</updated>
-  <id>http://example.com/</id>
+  <id>https://hexo.tangxs0808.ltd/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>TangXS</name>
     
   </author>
   
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hexo melody 主题配置</title>
-    <link href="http://example.com/2020/12/10/Hexo-melody-%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/"/>
-    <id>http://example.com/2020/12/10/Hexo-melody-%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/</id>
+    <link href="https://hexo.tangxs0808.ltd/2020/12/10/Hexo-melody-%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/"/>
+    <id>https://hexo.tangxs0808.ltd/2020/12/10/Hexo-melody-%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/</id>
     <published>2020-12-10T02:52:47.000Z</published>
     <updated>2020-12-10T05:04:42.068Z</updated>
     
@@ -30,7 +30,7 @@
     
     
     
-    <category term="技术教程" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/"/>
+    <category term="技术教程" scheme="https://hexo.tangxs0808.ltd/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/"/>
     
     
   </entry>
