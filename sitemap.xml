@@ -2,21 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://tangxs0808.gitee.io/hexo/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/index.html</loc>
+    <loc>https://tangxs0808.github.io/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/index.html</loc>
     
     <lastmod>2020-12-08</lastmod>
     
   </url>
   
   <url>
-    <loc>https://tangxs0808.gitee.io/hexo/%E6%A0%91%E8%8E%93%E6%B4%BE/index.html</loc>
+    <loc>https://tangxs0808.github.io/%E6%A0%91%E8%8E%93%E6%B4%BE/index.html</loc>
     
     <lastmod>2020-12-08</lastmod>
     
   </url>
   
   <url>
-    <loc>https://tangxs0808.gitee.io/hexo/2020/12/10/hello-world/</loc>
+    <loc>https://tangxs0808.github.io/2020/12/10/hello-world/</loc>
     
     <lastmod>2020-12-08</lastmod>
     
@@ -24,7 +24,7 @@
   
 
   <url>
-    <loc>https://tangxs0808.gitee.io/hexo</loc>
+    <loc>https://tangxs0808.github.io/</loc>
     <lastmod>2020-12-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
