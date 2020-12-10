@@ -3,11 +3,11 @@
   <title>Tangxs&#39;s Tavern</title>
   
   <subtitle>Sharing is a virtue</subtitle>
-  <link href="https://hexo.tangxs0808.ltd/atom.xml" rel="self"/>
+  <link href="https://tangxs0808.gitee.io/hexo/atom.xml" rel="self"/>
   
-  <link href="https://hexo.tangxs0808.ltd/"/>
+  <link href="https://tangxs0808.gitee.io/hexo/"/>
   <updated>2020-12-08T02:42:21.888Z</updated>
-  <id>https://hexo.tangxs0808.ltd/</id>
+  <id>https://tangxs0808.gitee.io/hexo/</id>
   
   <author>
     <name>TangXS</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="https://hexo.tangxs0808.ltd/2020/12/10/hello-world/"/>
-    <id>https://hexo.tangxs0808.ltd/2020/12/10/hello-world/</id>
+    <link href="https://tangxs0808.gitee.io/hexo/2020/12/10/hello-world/"/>
+    <id>https://tangxs0808.gitee.io/hexo/2020/12/10/hello-world/</id>
     <published>2020-12-10T00:26:15.218Z</published>
     <updated>2020-12-08T02:42:21.888Z</updated>
     
