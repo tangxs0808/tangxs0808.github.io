@@ -6,7 +6,7 @@
   <link href="https://hexo.tangxs0808.ltd/atom.xml" rel="self"/>
   
   <link href="https://hexo.tangxs0808.ltd/"/>
-  <updated>2020-12-10T08:23:49.796Z</updated>
+  <updated>2020-12-11T00:59:00.993Z</updated>
   <id>https://hexo.tangxs0808.ltd/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://hexo.tangxs0808.ltd/2020/12/10/%E6%A0%91%E8%8E%93%E6%B4%BE4B%E9%83%A8%E7%BD%B2Docker%E5%AE%89%E8%A3%85%E8%BF%85%E9%9B%B7%E7%A6%BB%E7%BA%BF%E4%B8%8B%E8%BD%BD/"/>
     <id>https://hexo.tangxs0808.ltd/2020/12/10/%E6%A0%91%E8%8E%93%E6%B4%BE4B%E9%83%A8%E7%BD%B2Docker%E5%AE%89%E8%A3%85%E8%BF%85%E9%9B%B7%E7%A6%BB%E7%BA%BF%E4%B8%8B%E8%BD%BD/</id>
     <published>2020-12-10T08:12:57.000Z</published>
-    <updated>2020-12-10T08:23:49.796Z</updated>
+    <updated>2020-12-11T00:59:00.993Z</updated>
     
-    <content type="html"><![CDATA[<p>迅雷这款软件相信大家都不陌生，支持mac、pc、deepin的linxu版</p><p>但是还是不支持大部分的linux，今天就带来一期用Docker来安装部署迅雷离线下载</p><a id="more"></a><p>##安装Docker容器<br>在此就不过多叙述安装方法（可以简单用宝塔安装）<br>由于使用宝塔面板安装的Docker，自然是有宝塔自带的控制台。</p><p>###安装好容器，再下载镜像文件<br>镜像<a href="https://tangxs0808.ltd/#s/6dVpBdcA">下载地址</a>，下载好后进入“镜像导出”选择上传文件。<br>接着创建容器，其中只有两个地方需要注意。</p><p>IP可以不用选择，端口映射9000 服务器端口填不冲突的即可。</p><p>目录映射：这个是绝对地址，不正确填是无法启动，获得激活码！</p><p>容器目录：/app/TDDOWNLOAD 服务器目录自行选择即可（前提是容量够）</p><p>到这里就完成了，附一张成功图片。<br><img src="/img/DF7C2BA0-A390-4E69-A879-431BC43791FE.jpg"></p>]]></content>
+    <content type="html"><![CDATA[<p>迅雷这款软件相信大家都不陌生，支持mac、pc、deepin的linxu版</p><p>但是还是不支持大部分的linux，今天就带来一期用Docker来安装部署迅雷离线下载</p><a id="more"></a><h2 id="安装Docker容器"><a href="#安装Docker容器" class="headerlink" title="安装Docker容器"></a>安装Docker容器</h2><p>在此就不过多叙述安装方法（可以简单用宝塔安装）<br>由于使用宝塔面板安装的Docker，自然是有宝塔自带的控制台。</p><h3 id="安装好容器，再下载镜像文件"><a href="#安装好容器，再下载镜像文件" class="headerlink" title="安装好容器，再下载镜像文件"></a>安装好容器，再下载镜像文件</h3><p>镜像<a href="https://tangxs0808.ltd/#s/6dVpBdcA">下载地址</a>，下载好后进入“镜像导出”选择上传文件。<br>接着创建容器，其中只有两个地方需要注意。</p><p>IP可以不用选择，端口映射9000 服务器端口填不冲突的即可。</p><p>目录映射：这个是绝对地址，不正确填是无法启动，获得激活码！</p><p>容器目录：/app/TDDOWNLOAD 服务器目录自行选择即可（前提是容量够）</p><p>到这里就完成了，附一张成功图片。<br><img src="/img/DF7C2BA0-A390-4E69-A879-431BC43791FE.jpg"></p>]]></content>
     
     
     <summary type="html">&lt;p&gt;迅雷这款软件相信大家都不陌生，支持mac、pc、deepin的linxu版&lt;/p&gt;
