@@ -6,7 +6,7 @@
   <link href="https://hexo.tangxs0808.ltd/atom.xml" rel="self"/>
   
   <link href="https://hexo.tangxs0808.ltd/"/>
-  <updated>2020-12-11T07:39:54.039Z</updated>
+  <updated>2020-12-12T01:43:56.268Z</updated>
   <id>https://hexo.tangxs0808.ltd/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>树莓派设置静态IP地址</title>
+    <link href="https://hexo.tangxs0808.ltd/2020/12/12/%E6%A0%91%E8%8E%93%E6%B4%BE%E8%AE%BE%E7%BD%AE%E9%9D%99%E6%80%81IP%E5%9C%B0%E5%9D%80/"/>
+    <id>https://hexo.tangxs0808.ltd/2020/12/12/%E6%A0%91%E8%8E%93%E6%B4%BE%E8%AE%BE%E7%BD%AE%E9%9D%99%E6%80%81IP%E5%9C%B0%E5%9D%80/</id>
+    <published>2020-12-12T01:42:52.000Z</published>
+    <updated>2020-12-12T01:43:56.268Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/css/APlayer.min.css"><script src="/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/js/Meting.min.js"></script><h3 id="网上很多奇奇怪怪的设置，以及花式玩法。但今天带来的觉对精简，只有干货。"><a href="#网上很多奇奇怪怪的设置，以及花式玩法。但今天带来的觉对精简，只有干货。" class="headerlink" title="网上很多奇奇怪怪的设置，以及花式玩法。但今天带来的觉对精简，只有干货。"></a>网上很多奇奇怪怪的设置，以及花式玩法。但今天带来的觉对精简，只有干货。</h3><h3 id="简简单单只有几步"><a href="#简简单单只有几步" class="headerlink" title="简简单单只有几步"></a>简简单单只有几步</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo nano /etc/dhcpcd.conf</span><br><span class="line">interface wlan0 //设置需要固定的端口 eth0 or wlan0</span><br><span class="line">static ip_address=192.168.1.*/24 //设置IP及掩码</span><br><span class="line"><span class="comment">#static ip6_address=fd51:42f8:caae:d92e::ff/64</span></span><br><span class="line">static routers=192.168.1.1 //设置网关</span><br><span class="line">static domain_name_servers=192.168.1.1 // DNS</span><br></pre></td></tr></table></figure><p><img src="https://boke.tangxs0808.ltd/wp-content/uploads/2020/11/1606720991003.jpg"></p><h3 id="其中IPv6-看个人需求设置"><a href="#其中IPv6-看个人需求设置" class="headerlink" title="其中IPv6 看个人需求设置"></a>其中IPv6 看个人需求设置</h3><p>重启以生效</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/js/APlayer.min.js&quot; class=&quot;aplayer-se</summary>
+      
+    
+    
+    
+    <category term="树莓派" scheme="https://hexo.tangxs0808.ltd/categories/%E6%A0%91%E8%8E%93%E6%B4%BE/"/>
+    
+    
+    <category term="树莓派" scheme="https://hexo.tangxs0808.ltd/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/"/>
+    
+    <category term="Linux" scheme="https://hexo.tangxs0808.ltd/tags/Linux/"/>
+    
+    <category term="静态ip" scheme="https://hexo.tangxs0808.ltd/tags/%E9%9D%99%E6%80%81ip/"/>
+    
+  </entry>
   
   <entry>
     <title>在树莓派上使用SSD1306OLED屏幕</title>
