@@ -6,7 +6,7 @@
   <link href="https://hexo.tangxs0808.ltd/atom.xml" rel="self"/>
   
   <link href="https://hexo.tangxs0808.ltd/"/>
-  <updated>2020-12-12T01:43:56.268Z</updated>
+  <updated>2020-12-23T01:49:29.734Z</updated>
   <id>https://hexo.tangxs0808.ltd/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>树莓派4b上手初体验，超频2.1GHz！</title>
+    <link href="https://hexo.tangxs0808.ltd/2020/12/23/%E6%A0%91%E8%8E%93%E6%B4%BE4b%E4%B8%8A%E6%89%8B%E5%88%9D%E4%BD%93%E9%AA%8C%EF%BC%8C%E8%B6%85%E9%A2%912-1GHz%EF%BC%81/"/>
+    <id>https://hexo.tangxs0808.ltd/2020/12/23/%E6%A0%91%E8%8E%93%E6%B4%BE4b%E4%B8%8A%E6%89%8B%E5%88%9D%E4%BD%93%E9%AA%8C%EF%BC%8C%E8%B6%85%E9%A2%912-1GHz%EF%BC%81/</id>
+    <published>2020-12-23T01:35:38.000Z</published>
+    <updated>2020-12-23T01:49:29.734Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/css/APlayer.min.css"><script src="/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/js/Meting.min.js"></script><h2 id="树莓派4b上手初体验，超频2-1GHz！"><a href="#树莓派4b上手初体验，超频2-1GHz！" class="headerlink" title="树莓派4b上手初体验，超频2.1GHz！"></a>树莓派4b上手初体验，超频2.1GHz！</h2><p>作为一名PC DIY玩家，对于Single Board Computer多多少少都会些兴趣，而作为SBC最广为人知的代表，Raspberry Pi更是我个人从公布之初就开始关注，我也在第二代的时候入手过一块B版，但因为是纯个人兴趣爱好，而非工作或者开发需要，自然到手把玩一番后就吃灰了，但其性能很弱，其实也是我对其没有继续折腾的一个重要原因。直到去年Raspberry Pi 4的推出，才完全改变了这块SBC孱弱性能的缺点。</p><p>Raspberry Pi 4搭载了博通BCM2711 SoC，在CPU部分采用了四核心的Cortex-A72，虽然相比如今主流的手机SoC，这配置其实也不够看，但对于一块SBC的性能，相信大多数玩家和用户都能感到满意了，我当时也着实心动了，但鉴于太多东西玩了，抽身乏术，便慢慢淡忘了。但在今年五月底，Raspberry Pi 4突然公布了个8GB内存版，就再次激起了我的兴趣，所以到最近有些时间，入手了一块来玩玩。</p><p>当然我也并非是“滚水禄脚”那样就下单了，在入手前我也是做了些功课的，首先是电源的购置。Raspberry Pi 4在去年刚推出不久，便曝出了USB-C口有设计缺陷，会与PD充电头不兼容，但后续出货的批次据说就改进了，所以这次8GB版理论上是不会有这个问题，而且这次新版还修改了电源模块（但没说是为了干嘛），官方表示为此也是延误了一些推出的时间，原本我还想着本来用手头有的PD充电头，但最终还是选择了一个号称专为Raspberry Pi做的5V/3A输出充电头，配合一条带有开关的USB-C充电线。</p><p>再就是散热，博通BCM2711 SoC用的是28nm工艺制程，CPU都是俗称的大核，虽然最高主频被限制在1.5GHz，但据一些已入手的用户反映，Raspberry Pi 4的发热还是挺大的，加上我比较无聊，想着买来要玩下超频…所以就特别加装一个带有双风扇主动散热的配件，网上还有用迷你塔式甚至水冷散热，但我觉得那些有点夸张了。而有意思的是，酷冷至尊在前段时间还推出了一个Raspberry Pi 4的机壳，宣称能提供压制超频后的发热，但那个壳目前只有在国外卖，看看后续能否借一个来体验下。</p><p>由于发展到第4代了，Raspberry Pi现在的操作系统、软件和教程等等什么的都非常成熟了，所以即使你不是开发者或创客（Marker），其实安装好官方的Raspberry Pi OS，把它作为一部超小型电脑，应付上上网、看看视频、打打文档等等使用，也是完全没问题的。</p><p>而且整个操作系统的安装方式也非常简单，从<a href="https://www.raspberrypi.org/software/operating-systems/#raspberry-pi-os-32-bit">Raspberry Pi官网下载</a>最新的固件，用同样是官方的Imager烧录进MicroSD卡里面，再把卡插进Raspberry Pi，插电开机就进入系统，没有比这个更容易的了，估计连我那位对电子设备一窍不通的女朋友，都应该知道怎样弄。</p><p>当然我还是想试一下比较进阶的玩法，主要是因为我觉得MicroSD卡槽的读写速度太慢了，所以想着把系统装到移动U盘或者SSD上，可以有更好的系统运行性能，但目前Raspberry Pi 4还没有原生的从USB启动支持（有个beta），好在有位高玩做了个BerryBoot，可以实现这种启动方式。</p><p>只是理论操作都很容易懂，但实际安装起来，我目前遇到了个BerryBoot不支持官方OS固件的问题，会提示不支持SquashFS，解决办法是转换下原版的img文件，但可能我们公司的网络有些问题，在Raspberry Pi OS里面无法安装kpartx相关文件，还无法转成能用的固件，故还要折腾下。</p><p><img src="https://img.expreview.com/news/2020/08/08/rap_bery_48_ss.jpg"></p><p>再就是超频了，据其他玩家的试验，在供电和散热足够情况下，Raspberry Pi 4这块SoC的CPU，超频到全核2.0GHz是很容易的，而有点意外的是，我发现PC DIY玩家喜欢的国外媒体tomshardware，居然也出过一篇<a href="https://www.tomshardware.com/how-to/overclock-any-raspberry-pi">Raspberry Pi超频教程</a>，但现在超频还有个更简单的方式，有玩家做了图形界面的CammanderPi，在上面点几点就能超频了。只是在安装这个软件时，我同样遇到上面的连不上Raspberry服务器的情况，所以也暂时没超到频（主要是想先写这篇文章）。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update &amp;&amp; sudo apt dist-upgrade</span><br><span class="line">sudo nano /boot/config.txt</span><br><span class="line"> </span><br><span class="line">添加：</span><br><span class="line">arm_freq=2100</span><br><span class="line">gpu_freq=750</span><br><span class="line">over_voltage=6</span><br><span class="line">force_turbo = 1</span><br><span class="line"></span><br><span class="line">sudo reboot</span><br></pre></td></tr></table></figure><p>已超频至2.1GHz的CPU，750MHz的GPU，稳定运行。</p><p><img src="https://img.expreview.com/news/2020/08/10/rapi_oc_2100.jpg"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/js/APlayer.min.js&quot; class=&quot;aplayer-se</summary>
+      
+    
+    
+    
+    <category term="树莓派" scheme="https://hexo.tangxs0808.ltd/categories/%E6%A0%91%E8%8E%93%E6%B4%BE/"/>
+    
+    
+    <category term="树莓派" scheme="https://hexo.tangxs0808.ltd/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/"/>
+    
+    <category term="超频" scheme="https://hexo.tangxs0808.ltd/tags/%E8%B6%85%E9%A2%91/"/>
+    
+  </entry>
   
   <entry>
     <title>树莓派设置静态IP地址</title>
@@ -105,7 +131,7 @@
     <link href="https://hexo.tangxs0808.ltd/2020/12/10/%E6%A0%91%E8%8E%93%E6%B4%BE4B%E9%83%A8%E7%BD%B2Docker%E5%AE%89%E8%A3%85%E8%BF%85%E9%9B%B7%E7%A6%BB%E7%BA%BF%E4%B8%8B%E8%BD%BD/"/>
     <id>https://hexo.tangxs0808.ltd/2020/12/10/%E6%A0%91%E8%8E%93%E6%B4%BE4B%E9%83%A8%E7%BD%B2Docker%E5%AE%89%E8%A3%85%E8%BF%85%E9%9B%B7%E7%A6%BB%E7%BA%BF%E4%B8%8B%E8%BD%BD/</id>
     <published>2020-12-10T08:12:57.000Z</published>
-    <updated>2020-12-11T00:59:00.993Z</updated>
+    <updated>2020-12-23T01:49:31.006Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/css/APlayer.min.css"><script src="/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/js/Meting.min.js"></script><p>迅雷这款软件相信大家都不陌生，支持mac、pc、deepin的linxu版</p><p>但是还是不支持大部分的linux，今天就带来一期用Docker来安装部署迅雷离线下载</p><a id="more"></a><h2 id="安装Docker容器"><a href="#安装Docker容器" class="headerlink" title="安装Docker容器"></a>安装Docker容器</h2><p>在此就不过多叙述安装方法（可以简单用宝塔安装）<br>由于使用宝塔面板安装的Docker，自然是有宝塔自带的控制台。</p><h3 id="安装好容器，再下载镜像文件"><a href="#安装好容器，再下载镜像文件" class="headerlink" title="安装好容器，再下载镜像文件"></a>安装好容器，再下载镜像文件</h3><p>镜像<a href="https://tangxs0808.ltd/#s/6dVpBdcA">下载地址</a>，下载好后进入“镜像导出”选择上传文件。<br>接着创建容器，其中只有两个地方需要注意。</p><p>IP可以不用选择，端口映射9000 服务器端口填不冲突的即可。</p><p>目录映射：这个是绝对地址，不正确填是无法启动，获得激活码！</p><p>容器目录：/app/TDDOWNLOAD 服务器目录自行选择即可（前提是容量够）</p><p>到这里就完成了，附一张成功图片。<br><img src="/img/DF7C2BA0-A390-4E69-A879-431BC43791FE.jpg"></p>]]></content>
     
