@@ -6,7 +6,7 @@
   <link href="https://hexo.tangxs0808.ltd/atom.xml" rel="self"/>
   
   <link href="https://hexo.tangxs0808.ltd/"/>
-  <updated>2020-12-23T01:49:29.734Z</updated>
+  <updated>2020-12-25T03:43:43.448Z</updated>
   <id>https://hexo.tangxs0808.ltd/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CloudFlare-Workers项目整理</title>
+    <link href="https://hexo.tangxs0808.ltd/2020/12/25/%E9%A1%B9%E7%9B%AE%E6%95%B4%E7%90%86/"/>
+    <id>https://hexo.tangxs0808.ltd/2020/12/25/%E9%A1%B9%E7%9B%AE%E6%95%B4%E7%90%86/</id>
+    <published>2020-12-25T03:38:26.000Z</published>
+    <updated>2020-12-25T03:43:43.448Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/css/APlayer.min.css"><script src="/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/js/Meting.min.js"></script><h2 id="CloudFlare-Workers-项目整理"><a href="#CloudFlare-Workers-项目整理" class="headerlink" title="CloudFlare Workers 项目整理"></a>CloudFlare Workers 项目整理</h2><p>本文整理了一些不需要服务器便能搭建的小项目，web服务不会受第三方服务商的网速限制。解放你的服务器吧！！！</p><h3 id="网盘目录"><a href="#网盘目录" class="headerlink" title="网盘目录"></a>网盘目录</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">Goindex</span><br><span class="line"></span><br><span class="line">Goindex 修改版，支持多盘、搜索、分页加载等功能。</span><br><span class="line"></span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;yanzai&#x2F;goindex</span><br><span class="line"></span><br><span class="line">goindex-theme-acrou</span><br><span class="line">另一个 Goindex 修改版</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;Aicirou&#x2F;goindex-theme-acrou</span><br><span class="line"></span><br><span class="line">GDindex</span><br><span class="line">使用Vue编写的 Google Drive 目录</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;maple3142&#x2F;GDIndex</span><br><span class="line"></span><br><span class="line">OneDrive Index</span><br><span class="line">OneDrive 目录</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;heymind&#x2F;OneDrive-Index-Cloudflare-Worker</span><br></pre></td></tr></table></figure><h3 id="代理"><a href="#代理" class="headerlink" title="代理"></a>代理</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">jsproxy</span><br><span class="line">一个基于浏览器端 JS 实现的在线代理</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;EtherDream&#x2F;jsproxy</span><br><span class="line"></span><br><span class="line">Workers-Proxy</span><br><span class="line">使用Cloudflare Workers构建的轻量级Javascript反向代理</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;Berkeley-Reject&#x2F;Workers-Proxy</span><br><span class="line"></span><br><span class="line">gh-proxy</span><br><span class="line">github release、archive以及项目文件的加速项目</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;hunshcn&#x2F;gh-proxy</span><br><span class="line"></span><br><span class="line">Workers-Proxy</span><br><span class="line">Cloudflare Workers平台镜像网站的部署脚本</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;yenpou&#x2F;Workers-Proxy</span><br></pre></td></tr></table></figure><h3 id="网站"><a href="#网站" class="headerlink" title="网站"></a>网站</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Cloudflare Workers blog</span><br><span class="line">Cloudflare workers + Github 实现的动态博客系统，使用边缘计算，无需服务器。</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;kasuganosoras&#x2F;cloudflare-worker-blog</span><br><span class="line"></span><br><span class="line">CF-Worker-Dir</span><br><span class="line">个人导航网站</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;sleepwood&#x2F;CF-Worker-Dir</span><br></pre></td></tr></table></figure><h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">create-share-teamdrive</span><br><span class="line">创建并分享谷歌团队盘</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;yyuueexxiinngg&#x2F;some-scripts&#x2F;blob&#x2F;master&#x2F;workers&#x2F;google&#x2F;drive&#x2F;create-share-teamdrive.js</span><br><span class="line"></span><br><span class="line">duanwangzhi</span><br><span class="line">一个极简风格的短网址转换。</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;Closty&#x2F;duanwangzhi</span><br><span class="line"></span><br><span class="line">部署基于 Telegraf 框架的 Telegram Bot</span><br><span class="line">https:&#x2F;&#x2F;moe.best&#x2F;tutorial&#x2F;cfworker-telegraf-tgbot.html</span><br><span class="line"></span><br><span class="line">搭建网站状态监控</span><br><span class="line">https:&#x2F;&#x2F;www.raycoder.me&#x2F;p&#x2F;cloudflare-workers-website-monitoring&#x2F;</span><br><span class="line"></span><br><span class="line">Cloudflare Worker 反代 V2</span><br><span class="line">https:&#x2F;&#x2F;www.hostloc.com&#x2F;thread-585159-1-1.html</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/js/APlayer.min.js&quot; class=&quot;aplayer-se</summary>
+      
+    
+    
+    
+    <category term="技术教程" scheme="https://hexo.tangxs0808.ltd/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="Linux" scheme="https://hexo.tangxs0808.ltd/tags/Linux/"/>
+    
+    <category term="CloudFlare" scheme="https://hexo.tangxs0808.ltd/tags/CloudFlare/"/>
+    
+    <category term="Workers" scheme="https://hexo.tangxs0808.ltd/tags/Workers/"/>
+    
+  </entry>
   
   <entry>
     <title>树莓派4b上手初体验，超频2.1GHz！</title>
